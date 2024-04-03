@@ -3,8 +3,8 @@ import Chart from "react-apexcharts";
 
 function ApexSparkTile(props) {
   const { data } = props;
-  const [options, setOptions] = useState(data.chartData ? data.chartData.options : "");
-  const [series, setSeries] = useState(data.chartData ? data.chartData.series : "");
+  const [options] = useState(data.chartData ? data.chartData.options : "");
+  const [series] = useState(data.chartData ? data.chartData.series : "");
 
   return (
     <div className="card mb-4">

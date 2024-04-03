@@ -1,6 +1,6 @@
 export default async function getListApi({ token }) {
     try {
-        const responce = await fetch("http://localhost:3500/auth/list", {
+        const responce = await fetch(process.env.REACT_APP_DATEBASE_URL + "/auth/list", {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json',

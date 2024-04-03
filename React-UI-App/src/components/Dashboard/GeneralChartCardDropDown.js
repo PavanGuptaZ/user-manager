@@ -16,7 +16,7 @@ function GeneralChartCardDropDown(props) {
             );
             chart.render();
         }
-    }, []);
+    }, [data, identity]);
 
 
     return (

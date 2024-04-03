@@ -7,7 +7,7 @@ function BasicValidationForm() {
     const [text2, setText2] = useState("");
     const [text3, setText3] = useState("");
     const [gender, setGender] = useState("");
-    const [select, setSelect] = useState("");
+    const [select] = useState("");
     const [button, setButton] = useState(false);
 
     return (
@@ -63,7 +63,7 @@ function BasicValidationForm() {
                                 <label className="form-label">Radio Button</label>
                                 <br />
                                 <label className="fancy-radio parsley-error">
-                                    <input type="radio" name="gender" value="male" onChange={(e) => { setGender(e.target.value); }} required data-parsley-errors-container="#error-radio" data-parsley-multiple="gender" data-parsley-id="43" />
+                                    <input type="radio" name="gender" value={gender ? gender : "male"} onChange={(e) => { setGender(e.target.value); }} required data-parsley-errors-container="#error-radio" data-parsley-multiple="gender" data-parsley-id="43" />
                                     <span className="px-2"><i></i>Male</span>
                                 </label>
                                 <label className="fancy-radio">

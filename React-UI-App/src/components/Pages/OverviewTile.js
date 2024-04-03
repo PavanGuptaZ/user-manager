@@ -6,20 +6,20 @@ function OverviewTile(props) {
     const { data } = props;
     const { title, subTitle1, subTitle2, linkText, showHeader, tableData, hideDownload, showBtnGroup } = props.data
     const { index } = props;
-    const [options, setOptions] = useState(data.chartData ? data.chartData.options : "");
-    const [series, setSeries] = useState(data.chartData ? data.chartData.series : "");
+    const [options] = useState(data.chartData ? data.chartData.options : "");
+    const [series] = useState(data.chartData ? data.chartData.series : "");
 
     useEffect(() => {
         if (options !== "") {
-            const { showBtnGroup } = props.data;
+            // const { showBtnGroup } = props.data;
             // const {index} = props;
             var opt = options;
             opt.series = series;
 
 
         }
-    }, []);
-    
+    }, [options, series]);
+
     return (
         <div className="card mb-4 border-0 lift">
             <div className="card-header py-3 d-flex flex-wrap  justify-content-between align-items-center bg-transparent border-bottom-0">
@@ -42,10 +42,10 @@ function OverviewTile(props) {
             <div className="card-body">
                 {showBtnGroup ? <div className="btn-group" role="group" aria-label="Basic example">
                     <button type="button" className="btn btn-outline-secondary active" id="one_month" onClick={() => {
-                        
+
                     }} >1M</button>
                     <button type="button" className="btn btn-outline-secondary" id="six_months" onClick={() => {
-                        
+
 
                     }}>6M</button>
                     <button type="button" className="btn btn-outline-secondary" id="one_year">1Y</button>

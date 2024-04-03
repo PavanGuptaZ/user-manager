@@ -1,6 +1,6 @@
 import React from "react";
-import OpenMenu from "../../assets/images/document/menu-open.png";
-import CloseMenu from "../../assets/images/document/menu-close.png";
+// import OpenMenu from "../../assets/images/document/menu-open.png";
+// import CloseMenu from "../../assets/images/document/menu-close.png";
 
 function Documentation() {
 
@@ -40,11 +40,11 @@ function Documentation() {
                             <p>This template is built in ReactJS and requires Node 12.3.1 and NPM 6.9.0 to be Installed</p>
                             <p>This template is built on react 17+</p>
                             <ul>
-                                <li><strong>Node.js and NPM:</strong>  You can download Node.js from <a href="https://nodejs.org" target="_blank" className="text-primary text-decoration-underline">NodeJS</a>. NPM comes bundled with Node.js</li>
+                                <li><strong>Node.js and NPM:</strong>  You can download Node.js from <a rel="noreferrer" href="https://nodejs.org" target="_blank" className="text-primary text-decoration-underline">NodeJS</a>. NPM comes bundled with Node.js</li>
                                 <li><strong>Project setup:</strong> After installing Node <code>npm install</code> command from the root of your project directory into terminal. It will install all the necessary dependencies for the application using package.json file.</li>
                                 <li><strong>Development server:</strong> Run <code>npm Start</code> command from project directory and navigate to <strong>http://localhost:4200/</strong> into your browser.</li>
                                 <li><strong>Build:</strong> Run <code>npm run build</code> command from project directory to build the project. The build artifacts will be stored in the dist/ directory.</li>
-                                <li><strong>Further help:</strong> To get more help on the project setup, go and check out <a href="https://reactjs.org/" target="_blank" className="text-primary text-decoration-underline">https://reactjs.org/</a>.</li>
+                                <li><strong>Further help:</strong> To get more help on the project setup, go and check out <a rel="noreferrer" href="https://reactjs.org/" target="_blank" className="text-primary text-decoration-underline">https://reactjs.org/</a>.</li>
                             </ul>
                         </div>
                     </div>

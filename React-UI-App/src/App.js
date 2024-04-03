@@ -17,7 +17,8 @@ function App(props) {
     const activeKey1 = res;
     return activeKey1
   }
-
+  console.log(process.env.PUBLIC_URL)
+  console.log(activekey())
   const user = useGetUser()
   const userLoading = useUserLoading()
 

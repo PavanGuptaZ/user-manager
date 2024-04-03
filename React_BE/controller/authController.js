@@ -51,10 +51,10 @@ const login = async (req, res) => {
         if (req.body?.stayLogin) {
             const refreshToken = jwt.sign({ email }, process.env.REFRESH_TOKEN, { expiresIn: '7d' })
             res.cookie(`REFRESH_TOKEN`, refreshToken, {
-                // sameSite: 'None',
+                sameSite: 'None',
                 maxAge: 7 * 24 * 60 * 60 * 1000,
                 httpOnly: true,
-                // secure: false,
+                secure: true,
             })
         }
         const accessToken = jwt.sign({ email }, process.env.ACCESS_TOKEN, { expiresIn: '1h' })
@@ -73,7 +73,7 @@ const refresh = async (req, res) => {
         const { REFRESH_TOKEN } = req.cookies
 
         jwt.verify(REFRESH_TOKEN, process.env.REFRESH_TOKEN, async (err, data) => {
-            if (err) return res.status(403).send({ message: "Forbidden" })
+            if (err) return res.status(403).send({ status: 'error', message: "Forbidden" })
             const user = await UserModal.findOne({ email: data.email }).lean().exec()
             if (!user) {
                 return res.status(409).send({ status: 'error', message: "user is not Register" })

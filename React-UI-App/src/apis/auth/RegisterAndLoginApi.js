@@ -1,6 +1,6 @@
 async function ApiFunction(type, data) {
     try {
-        const responce = await fetch("http://localhost:3500/auth/" + type, {
+        const responce = await fetch(process.env.REACT_APP_DATEBASE_URL + "/auth/" + type, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

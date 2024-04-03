@@ -61,17 +61,17 @@ function Sidebar(props) {
             }
         }
     }
-    function closeChildren() {
-        var otherTabs = document.getElementsByClassName("has-children")
-        if (otherTabs) {
-            for (var i = 0; i < otherTabs.length; i++) {
-                otherTabs[i].className = otherTabs[i].className.replace(" show", "");
-                if (otherTabs[i].parentElement.children.length > 1) {
-                    otherTabs[i].parentElement.children[0].setAttribute("aria-expanded", "false")
-                }
-            }
-        }
-    }
+    // function closeChildren() {
+    //     var otherTabs = document.getElementsByClassName("has-children")
+    //     if (otherTabs) {
+    //         for (var i = 0; i < otherTabs.length; i++) {
+    //             otherTabs[i].className = otherTabs[i].className.replace(" show", "");
+    //             if (otherTabs[i].parentElement.children.length > 1) {
+    //                 otherTabs[i].parentElement.children[0].setAttribute("aria-expanded", "false")
+    //             }
+    //         }
+    //     }
+    // }
     function GotoChangeMenu(val) {
         if (val === "UI Components") {
             props.history.push("ui-alerts");

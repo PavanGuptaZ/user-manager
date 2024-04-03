@@ -1,6 +1,6 @@
 async function ApiFunction({ token, link }) {
     try {
-        const responce = await fetch("http://localhost:3500/roles/" + link, {
+        const responce = await fetch(process.env.REACT_APP_DATEBASE_URL + "/roles/" + link, {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json',

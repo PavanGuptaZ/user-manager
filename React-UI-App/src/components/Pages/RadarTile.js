@@ -5,9 +5,9 @@ import { Dropdown } from "react-bootstrap";
 function RadarTile(props) {
 
     const { data } = props;
-    const [options, setOptions] = useState(data.chartData ? data.chartData.options : "");
-    const [series, setSeries] = useState(data.chartData ? data.chartData.series : "");
-    
+    const [options] = useState(data.chartData ? data.chartData.options : "");
+    const [series] = useState(data.chartData ? data.chartData.series : "");
+
     return (
         <div className="card mb-4">
             <div className="card-header d-flex justify-content-between align-items-center bg-transparent border-bottom-0">

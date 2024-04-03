@@ -4,21 +4,21 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { a11yLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function PillsNavs() {
-    function tabEvent(evt, panid, tabClass, navClass) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName(tabClass);
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].className = tabcontent[i].className.replace(" show", "");
-            tabcontent[i].className = tabcontent[i].className.replace(" active", "");
-        }
-        tablinks = document.getElementsByClassName(navClass);
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        evt.currentTarget.className += " active";
-        document.getElementById(panid).classList.add("show")
-        document.getElementById(panid).classList.add("active")
-    }
+    // function tabEvent(evt, panid, tabClass, navClass) {
+    //     var i, tabcontent, tablinks;
+    //     tabcontent = document.getElementsByClassName(tabClass);
+    //     for (i = 0; i < tabcontent.length; i++) {
+    //         tabcontent[i].className = tabcontent[i].className.replace(" show", "");
+    //         tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+    //     }
+    //     tablinks = document.getElementsByClassName(navClass);
+    //     for (i = 0; i < tablinks.length; i++) {
+    //         tablinks[i].className = tablinks[i].className.replace(" active", "");
+    //     }
+    //     evt.currentTarget.className += " active";
+    //     document.getElementById(panid).classList.add("show")
+    //     document.getElementById(panid).classList.add("active")
+    // }
 
     return (
         <div className="border-top mt-5 pt-3">
